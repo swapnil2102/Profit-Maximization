@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	
+	long long int n;
+	cin>>n;
+	long long int a[n];
+	
+	for(long long int i=0; i<n; i++)
+	{
+		cin>>a[i];
+	}
+	long long int md=a[1]-a[0];
+	long long int me=a[0];
+	for(long long int i=1; i<n; i++)
+	{
+		if(a[i]-me>md)
+		{
+			md=a[i]-me;
+		}
+		
+		if(a[i]<me)
+		{
+			me=a[i];
+		}
+	}
+	cout<<md;
+	return 0;
+}
+
